@@ -1,40 +1,20 @@
 # opsworks_env_variables-cookbook
 
-TODO: Enter the cookbook description here.
+Use this cookbook to set environment variables in your Rails app deployed on Opsworks. This cookbook creates an application.yml file for use with Figaro. The figaro gem https://github.com/laserlemon/figaro will load this application.yml into your Rails app making your env variables set in AWS Opsworks accessible to your application. See the figaro gem read me for more in depth usage.
 
 ## Supported Platforms
 
-TODO: List your supported platforms.
-
-## Attributes
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['opsworks_env_variables']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
+AWS Opsworks.
 
 ## Usage
 
 ### opsworks_env_variables::default
 
-Include `opsworks_env_variables` in your node's `run_list`:
+Include this cookbook in your berksfile.
+Add opsworks_env_variables::default to your rails app layer as a deploy step.
+Deploy
+Your app will now have access to the environment variables you set in your Opsworks application settings.
 
-```json
-{
-  "run_list": [
-    "recipe[opsworks_env_variables::default]"
-  ]
-}
 ```
 
 ## Contributing
