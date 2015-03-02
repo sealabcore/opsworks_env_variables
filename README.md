@@ -28,4 +28,4 @@ Your app will now have access to the environment variables you set in your Opswo
 
 ## License and Authors
 
-Author:: YOUR_NAME (<YOUR_EMAIL>)
+Author:: Mike Taylor (mike@kitcrm.com)
