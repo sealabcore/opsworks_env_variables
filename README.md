@@ -10,10 +10,12 @@ AWS Opsworks.
 
 ### opsworks_env_variables::default
 
-Include this cookbook in your berksfile.
-Add opsworks_env_variables::default to your rails app layer as a deploy step.
-Deploy
-Your app will now have access to the environment variables you set in your Opsworks application settings.
+* Add Figaro to your Rails application.
+* Include this cookbook in your berksfile.
+* Update your custom chef.
+* Add opsworks_env_variables::default to your rails app layer as a deploy step.
+* Deploy
+* Your app will now have access to the environment variables you set in your Opsworks application settings.
 
 ```
 
