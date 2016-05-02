@@ -8,7 +8,9 @@
 #
 
 node[:deploy].each do |application, deploy|
-  template "#{deploy[:current_path]}/config/application.yml" do
+  puts "DEPLOY #{deploy}"
+  puts "APPLICATION #{application}"
+  template "#{deploy[:deploy_to]}/current/config/application.yml" do
     mode '0644'
     owner deploy[:user]
     group deploy[:group]
