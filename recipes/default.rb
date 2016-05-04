@@ -8,8 +8,6 @@
 #
 
 node[:deploy].each do |application, deploy|
-  log "DEPLOY #{deploy}"
-  log "APPLICATION #{application}"
   template "#{deploy[:deploy_to]}/current/config/application.yml" do
     mode '0644'
     owner deploy[:user]
